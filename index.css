@@ -1,6 +1,33 @@
-h1, p {
-    margin: 0;
+body {
+    background-color: black;
+    color: white;
 }
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+/* button */
+button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.toggleTheme {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    float: right;
+}
+
+/* end of button */
 
 .center {
     position: absolute;
@@ -11,6 +38,42 @@ h1, p {
     text-align: left;
 }
 
+.header > * {
+    margin: 0;
+}
+
+
 .center > * {
-    display: block;      /* every child on its own line */
+    display: block;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    width: 550px;
+}
+
+.container div {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.container div.header {
+    grid-area: header;
+}
+
+.container div.content {
+    grid-area: content;
+}
+
+.container div.footer {
+    grid-area: footer;
+}
+
+.container div.footer > * {
+    margin: 0;
 }

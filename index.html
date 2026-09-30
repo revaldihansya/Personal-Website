@@ -7,14 +7,33 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <a href="timetable-image.html">
-        <button>Open timetable</button>
-    </a>
+    <button id="toggleTheme" class="toggleTheme" onclick="toggleTheme()">light</button>
     <div class="center">
-        <h1>Revaldi Hansya Widjanarka</h1>
-        <p>Bachelor of Data Science and Decisions at UNSW</p>
-        <button onclick="copyText()" id="textToCopy">revaldiwidjanarka@gmail.com</button>
-        <a href="https://www.linkedin.com/in/revaldihansya">LinkedIn</a>
+        <div class="container">
+            <div class="header">
+                <h1>Revaldi Hansya Widjanarka</h1>
+                <h2>Bachelor of Data Science and Decisions at UNSW</h2>
+            </div>
+    
+            <div class="content">
+                <p>Hello beautiful people, welcome to my website!</p>
+                <p>I'm a Data Science student at UNSW who enjoys working with people as much as with data. I'm an International Student Award recipient, and I'm bilingual in English and Indonesian.</p>
+                <p>I'm currently very intrested in expanding my horizons into the med-tech and hope to be able to do the most good with the knowledge that I have.</p>
+                <p>Outside of my studies, I am a "professional" Minecraft player and a "full-time" Genshin Impact historian🤣</p>
+            </div>
+            
+            <div class="footer">
+                <p>
+                    Email me:
+                    <button onclick="copyText()" id="textToCopy">revaldiwidjanarka@gmail.com</button>
+                </p>
+    
+                <p>
+                    Check out my
+                    <a href="https://www.linkedin.com/in/revaldihansya">LinkedIn</a>
+                </p>
+            </div>
+        </div>
     </div>
 
     <script rel="script" type="text/javascript" src="index.js"></script>   
