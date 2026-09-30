@@ -54,7 +54,7 @@ button:hover {
         "header"
         "content"
         "footer";
-    width: 550px;
+    width: min(90vw, 550px);
 }
 
 .container div {
