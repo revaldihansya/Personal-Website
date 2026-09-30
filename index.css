@@ -1,6 +1,12 @@
+/* adaptive sizing ig */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: white;
+    margin: 0;
 }
 
 body.light {
@@ -30,11 +36,10 @@ button:hover {
 /* end of button */
 
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: max-content;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
     text-align: left;
 }
 
