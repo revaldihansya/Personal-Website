@@ -9,3 +9,7 @@ function toggleTheme() {
     const isLight = document.body.classList.toggle("light");
     document.getElementById("toggleTheme").textContent = isLight ? "dark" : "light";
 }
+
+function farameer() {
+    
+}

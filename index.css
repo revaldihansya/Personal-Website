@@ -23,6 +23,10 @@ button {
     cursor: pointer;
 }
 
+a {
+    color: inherit;
+}
+
 button:hover {
     text-decoration: underline;
 }
@@ -31,6 +35,20 @@ button:hover {
     position: fixed;
     top: 32px;
     right: 32px;
+    float: right;
+}
+
+.farameer {
+    position: fixed;
+    top: 32px;
+    right: 64px;
+    float: right;
+}
+
+.back {
+    position: fixed;
+    top: 32px;
+    right: 64px;
     float: right;
 }
 
