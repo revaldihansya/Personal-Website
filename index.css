@@ -31,25 +31,13 @@ button:hover {
     text-decoration: underline;
 }
 
-.toggleTheme {
+.options {
     position: fixed;
+    float: right;
     top: 32px;
     right: 32px;
-    float: right;
-}
-
-.farameer {
-    position: fixed;
-    top: 32px;
-    right: 64px;
-    float: right;
-}
-
-.back {
-    position: fixed;
-    top: 32px;
-    right: 64px;
-    float: right;
+    display: flex;
+    gap: 8px;
 }
 
 /* end of button */
