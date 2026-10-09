@@ -1,65 +1,3 @@
-/* adaptive sizing ig */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #151E3F;
-    color: white;
-    margin: 0;
-    font-family: sans-serif;
-}
-
-body.light {
-    background-color: #D8DBE2;
-    color: black;
-}
-
-/* button */
-button {
-    background-color: transparent;
-    color: inherit;
-    border: none;
-    cursor: pointer;
-}
-
-a {
-    color: inherit;
-}
-
-button:hover {
-    text-decoration: underline;
-}
-
-.options {
-    position: fixed;
-    float: right;
-    top: 32px;
-    right: 32px;
-    display: flex;
-    gap: 8px;
-}
-
-/* end of button */
-
-.center {
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: grid;
-    place-items: center;
-    text-align: left;
-}
-
-.header > * {
-    margin: 0;
-}
-
-
-.center > * {
-    display: block;
-    margin: 0;
-}
-
 .container {
     display: grid;
     grid-template-areas:
@@ -67,6 +5,10 @@ button:hover {
         "content"
         "footer";
     width: min(90vw, 550px);
+}
+
+.header > * {
+    margin: 0;
 }
 
 .container div {

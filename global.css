@@ -1,0 +1,69 @@
+/* adaptive sizing ig */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* colors and stuff */
+body {
+    background-color: var(--coffee-bean);
+    color: var(--alabaster-grey);
+    margin: 0;
+    font-family: sans-serif;
+    transition: background-color 0.7s ease, color 0.5s ease;
+}
+
+body.light {
+    background-color: var(--tangerine-dream);
+    color: var(--coffee-bean);
+}
+
+/* button */
+button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+/* inherits the colour of the parent */
+a {
+    color: inherit;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+
+/* options top right */
+.options {
+    position: fixed;
+    float: right;
+    top: 32px;
+    right: 32px;
+    display: flex;
+    gap: 8px;
+}
+
+/* centering */
+.center {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    text-align: left;
+}
+
+.center > * {
+    display: block;
+    margin: 0;
+}
+
+/* colours */
+:root {
+    --alabaster-grey: #d8e2dcff;
+    --blue-slate: #545e75ff;
+    --coffee-bean: #230903ff;
+    --tangerine-dream: #ff934fff;
+    --reddish-brown: #a53f2bff;
+}
