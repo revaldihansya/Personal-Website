@@ -1,14 +1,11 @@
 .container {
     display: grid;
     grid-template-areas:
-        "header"
-        "content"
-        "footer";
-    width: min(90vw, 550px);
-}
-
-.header > * {
-    margin: 0;
+        "header  side"
+        "content side"
+        "footer  side";
+    grid-template-columns: 1fr 250px;
+    width: min(90vw, 800px);
 }
 
 .container div {
@@ -16,8 +13,28 @@
     padding-left: 10px;
 }
 
+.container div.side {
+    grid-area: side;
+    padding: 0;
+}
+
+.side video {
+    max-width: 175px;
+    height: auto;
+    outline: 7px solid #a53f2bff;
+}
+
+.side {
+    display: grid;
+    place-items: center;
+}
+
 .container div.header {
     grid-area: header;
+}
+
+.header > * {
+    margin: 0;
 }
 
 .container div.content {
