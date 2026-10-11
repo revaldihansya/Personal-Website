@@ -5,7 +5,26 @@
         "content side"
         "footer  side";
     grid-template-columns: 1fr 250px;
+    grid-template-rows: auto 1fr auto;
     width: min(90vw, 800px);
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "side"
+            "header"
+            "content"
+            "footer";
+    }
+
+    .side video {
+        width: auto;
+        max-width: 100%;
+        max-height: 40vh;
+    }
 }
 
 .container div {
@@ -22,6 +41,7 @@
     max-width: 175px;
     height: auto;
     outline: 6px solid #a53f2bff;
+    margin-bottom: 1em;
 }
 
 .side {
@@ -43,8 +63,13 @@
 
 .container div.footer {
     grid-area: footer;
+    margin-bottom: 1em;
 }
 
 .container div.footer > * {
     margin: 0;
+}
+
+.container button {
+    font: inherit;
 }

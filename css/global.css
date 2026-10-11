@@ -43,6 +43,7 @@ button:hover {
     right: 32px;
     display: flex;
     gap: 8px;
+    z-index: 2;
 }
 
 /* centering */
@@ -52,6 +53,7 @@ button:hover {
     display: grid;
     place-items: center;
     text-align: left;
+    padding-top: 80px;
 }
 
 .center > * {
@@ -66,4 +68,35 @@ button:hover {
     --coffee-bean: #230903ff;
     --tangerine-dream: #ff934fff;
     --reddish-brown: #a53f2bff;
+}
+
+/* fade on the top and bottom */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: var(--coffee-bean);
+    pointer-events: none;
+    z-index: 1;
+    transition: background-color 0.7s ease;
+}
+
+body::before {
+    top: 0;
+    -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+    mask-image: linear-gradient(to bottom, #000, transparent);
+}
+
+body::after {
+    bottom: 0;
+    -webkit-mask-image: linear-gradient(to top, #000, transparent);
+    mask-image: linear-gradient(to top, #000, transparent);
+}
+
+body.light::before,
+body.light::after {
+    background-color: var(--tangerine-dream);
 }
