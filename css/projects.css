@@ -1,0 +1,82 @@
+.container {
+    display: grid;
+    grid-template-areas:
+        "project1"
+        "side2"
+        "project2"
+        "side3"
+        "project3";
+    grid-template-columns: 1fr;
+    width: min(90vw, 800px);
+}
+
+@media (max-width: 700px) {
+    /* .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "project1"
+            "side2"
+            "project2";
+    } */
+
+    img {
+        width: auto;
+        max-width: 100%;
+        max-height: 40vh;
+    }
+}
+
+.container div {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.container div.project1 {
+    grid-area: project1;
+}
+
+.container div.project2 {
+    grid-area: project2;
+}
+
+.container div.project3 {
+    grid-area: project3;
+}
+
+.container div.side2 {
+    grid-area: side2;
+}
+
+.container div.side3 {
+    grid-area: side3;
+}
+    
+/* HOW TO ADD A NEW PROJECT
+copy the container div.projectn class
+make it for project number n 
+photos will follow the same format */
+
+.container > * > * {
+    margin: 0;
+}
+
+.container > * {
+    padding-bottom: 20px;
+}
+
+.container > [class^="side"] {
+    padding-bottom: 10px;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+    outline: 6px solid #a53f2bff;
+    margin-bottom: 1em;
+}
+
+.side {
+    display: grid;
+    place-items: center;
+}

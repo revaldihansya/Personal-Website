@@ -12,7 +12,6 @@
 @media (max-width: 700px) {
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
         grid-template-areas:
             "side"
             "header"
